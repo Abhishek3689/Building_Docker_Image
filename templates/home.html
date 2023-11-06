@@ -1,0 +1,21 @@
+<html>
+    <title>Web page</title>
+    <h1>Welcome to Calculator Home page</h1>
+    <body>
+        <h2>Calculator</h2>
+        
+<form action="/calculate" method="post">
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" name="num1" step="any" required>
+    <br><br>
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" name="num2" step="any" required>
+    <br><br>
+    <input type="submit" formaction="/calculate" formmethod="post" name="operation" value="add">
+    <input type="submit" formaction="/calculate" formmethod="post" name="operation" value="subtract">
+</form>
+{% if result is not none %}
+<h1>The Result is {{ result }}</h1>
+{% endif %}
+    </body>
+</html>
